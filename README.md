@@ -1,8 +1,8 @@
-# :card_index_dividers: project-python-39
+# :card_index_dividers: project-python3-flask
 
-> Template de Python 3
+> Template de Python 3 con Flask
 
-![alt](img/base.png)
+![alt](img/base.JPG)
 
 ## :gear: Requisitos
 
