@@ -18,7 +18,7 @@ def get_vars():
 @blue_print.route('/')
 def alive():
     version = get_var(Vars.VERSION)
-    logger().info(f'Version: {version}')
+    logger.info(f'Version: {version}')
     return jsonify(version=version)
 
 

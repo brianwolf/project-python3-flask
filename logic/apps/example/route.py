@@ -1,8 +1,8 @@
 from flask import Blueprint, request
 from flask.json import jsonify
-from logic.apps.example.errors.example_error import ExampleError
-from logic.apps.example.routes.v1.dtos import example_dto
-from logic.apps.example.services import example_service
+from logic.apps.example.error import ExampleError
+from logic.apps.example import dto
+from logic.apps.example import service
 from logic.libs.exception.exception import AppException
 
 blue_print = Blueprint('example', __name__, url_prefix='/api/v1/examples')
@@ -10,21 +10,21 @@ blue_print = Blueprint('example', __name__, url_prefix='/api/v1/examples')
 
 @blue_print.route('/', methods=['GET'])
 def get():
-    result = example_service.get_example()
-    return example_dto.example_to_json(result)
+    result = service.get_example()
+    return dto.example_to_json(result)
 
 
 @blue_print.route('/', methods=['POST'])
 def post():
-    m = example_dto.json_to_example(request.json)
-    m = example_service.add(m)
-    return example_dto.example_to_json(m), 201
+    m = dto.json_to_example(request.json)
+    m = service.add(m)
+    return dto.example_to_json(m), 201
 
 
 @blue_print.route('/all', methods=['GET'])
 def get_all():
-    result = example_service.get_all()
-    return jsonify([example_dto.example_to_json(o) for o in result]), 200
+    result = service.get_all()
+    return jsonify([dto.example_to_json(o) for o in result]), 200
 
 
 @blue_print.route('/errors/unknow', methods=['GET'])

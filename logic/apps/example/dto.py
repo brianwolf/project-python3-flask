@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Dict
 from uuid import UUID, uuid4
 
-from logic.apps.example.models.example import Example
+from logic.apps.example.model import Example
 
 
 def example_to_json(o: Example) -> Dict[str, object]:

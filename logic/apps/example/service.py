@@ -3,8 +3,8 @@ from datetime import datetime
 from typing import List
 from uuid import uuid4
 
-from logic.apps.example.models.example import Example
-from logic.apps.example.repositories import example_repository
+from logic.apps.example.model import Example
+from logic.apps.example import repository
 
 
 def get_example() -> Example:
@@ -23,7 +23,7 @@ def add(m: Example) -> Example:
     """
     Guarda un Example
     """
-    m.id = example_repository.add(m)
+    m.id = repository.add(m)
     return m
 
 
@@ -31,4 +31,4 @@ def get_all() -> List[Example]:
     """
     Obtiene todos los Example guardados
     """
-    return example_repository.get_all()
+    return repository.get_all()

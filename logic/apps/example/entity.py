@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from logic.apps.example.models.example import Example
+from logic.apps.example.model import Example
 from logic.libs.sqliteAlchemy import sqliteAlchemy
 from sqlalchemy import Column, DateTime, Float, Integer, String
 
@@ -11,11 +11,11 @@ class ExampleEntity(Entity):
     __tablename__ = 'examples'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=True)
-    string = Column(String)
+    string = Column(String(255))
     integer = Column(Integer)
     date_time = Column(DateTime)
     double = Column(Float)
-    uuid = Column(String)
+    uuid = Column(String(255))
 
     def to_model(self) -> Example:
         return Example(
