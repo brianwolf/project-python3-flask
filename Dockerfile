@@ -1,6 +1,6 @@
 # COMPILER
 # ---------------------------------------------
-FROM python:3.9-slim as compiler
+FROM python:3.10-slim as compiler
 
 WORKDIR /home/src
 COPY . .
@@ -13,7 +13,7 @@ RUN rm -fr dist/repo_modules_default
 
 # EXECUTION
 # ---------------------------------------------
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 WORKDIR /home/src
 

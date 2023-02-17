@@ -6,14 +6,14 @@
 
 ## :gear: Requisitos
 
-* python 3.9
+* python 3
 * virtualenv
 
 ## :tada: Uso
 
 ```bash
 # Creacion del virtual env
-virtualenv -p python3.9 env
+virtualenv -p python3 env
 
 # Activar el virtual env
 . env/bin/activate
@@ -25,9 +25,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## :books: Referencias
-
-* [Iconos](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+---
 
 ## :grin: Autor
 
