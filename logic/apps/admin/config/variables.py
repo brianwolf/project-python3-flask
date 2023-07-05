@@ -10,14 +10,18 @@ class Vars(Enum):
     LOGS_LEVEL = 'LOGS_LEVEL'
     LOGS_PATH = 'LOGS_PATH'
     LOGS_BACKUPS = 'LOGS_BACKUPS'
-    DB_SQLITE_LOGS = 'DB_SQLITE_LOGS'
-    DB_SQLITE_PATH = 'DB_SQLITE_PATH'
+    GIT_REPO_URL = 'GIT_REPO_URL'
+    GIT_REPO_USER = 'GIT_REPO_USER'
+    GIT_REPO_PASS = 'GIT_REPO_PASS'
+    GIT_REPO_BRANCH = 'GIT_REPO_BRANCH'
+    WORKSPACE = 'WORKSPACE'
+    TEMP_PATH = 'TEMP_PATH'
 
 
 def setup_vars():
     setup(
         Config(
             file_path='logic/resources/variables.yaml',
-            hiden_vars=['DB_SQLITE_PATH']
+            hiden_vars=[]
         )
     )
