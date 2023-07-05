@@ -1,8 +1,8 @@
-# :card_index_dividers: docker-sync
+# :card_index_dividers: project-python3-flask
 
-> Herramienta que permite sincronizar los yamls de un repo y ejecutarlos con docker compose up
+> Template de Python 3 con Flask
 
-![alt](img/docker.png)
+![alt](img/base.JPG)
 
 ## :gear: Requisitos
 
